@@ -76,3 +76,8 @@ the average of each measurement variable for each activity and each subject.
 |67|average-fBodyBodyGyroJerkMag-mean()|
 |68|average-fBodyBodyGyroJerkMag-std()|
 
+The first column "activity" should have one of the six values: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING.
+
+The second column "subject" is an integer identifier of the subject who carried out the experiment.
+
+The rest of the columns are bounded within [-1,1].
