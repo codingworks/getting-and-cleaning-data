@@ -2,7 +2,7 @@ library(dplyr)
 
 # Steps 1
 
-# Load tranin and test data sets and merge them
+# Load train and test data sets and merge them
 train_data <- read.table("UCI HAR Dataset/train/X_train.txt")
 test_data <- read.table("UCI HAR Dataset/test/X_test.txt")
 data <- rbind(train_data, test_data)
@@ -62,7 +62,7 @@ data_step5 <- group_by(data_step4, activity, subject) %>%
 
 # Set descriptive variable names for measurement columns (add a prefix "avg")
 nc <- ncol(data_step5)
-names(data_step5)[3:nc] <- paste("avg", meas_col_names, sep = "")
+names(data_step5)[3:nc] <- paste0("avg", meas_col_names)
 
 # Write data set data_step5 into a file
 write.table(data_step5, "data_step5.txt", row.name=FALSE)
