@@ -60,4 +60,4 @@ meas_col_names <- paste("average", names(data_step5)[3:nc], sep = "-")
 names(data_step5)[3:nc] <- meas_col_names
 
 # Write data set data_step5 into a file
-write.table(format(data_step5, "data_step5.txt", row.name=FALSE)
+write.table(data_step5, "data_step5.txt", row.name=FALSE)
